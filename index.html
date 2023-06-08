@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> abhi-Portfolio Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=League+Spartan:wght@100&family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(1, 1, 42);
+            color: white;
+            font-family: 'poppins', sans-serif;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 20px;
+
+
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0px 23px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(185, 185, 243);
+            font-size: 1.05rem;
+        }
+
+        .left {
+            font-size: 2.1rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+            align-items: center;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2.4rem;
+            margin-left: 25px;
+
+        }
+
+        .leftsection .btn {
+            padding: 15px;
+            border-radius: 6px;
+            background: rgb(5, 5, 43);
+            color: white;
+            border: 1px soli rgb(0, 0, 0);
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .leftsection .btn:active{
+            font-size: 15px;
+        }
+
+        .rightsection video {
+            width: 97%;
+            border-radius: 2rem;
+            box-shadow: #33383b;
+            box-sizing: 50px;
+            cursor: pointer;
+
+
+        }
+        .rightsection video:hover{
+            box-sizing: 70px;
+        }
+
+        .purpol {
+            color: rgb(9, 160, 158);
+            margin-left: 10px;
+        }
+
+        #element {
+            color: rgb(90, 156, 255);
+        }
+
+        .secoundsection {
+            max-width: 165vh;
+            margin: auto;
+            height: 80vh;
+        }
+
+        main hr {
+            border: 0;
+            background-color: aquamarine;
+            height: 1.02px;
+            margin: 40px 84px;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 50px 0px;
+        }
+
+        .project-heading {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-heading h3 {
+            font-size: 2.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgb(9, 110, 188);
+        }
+
+        .project-heading span {
+            color: #2b4277;
+        }
+
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: 1px solid rgb(237, 237, 237, 0.6);
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .portfolio-filter li {
+            margin: 10px;
+            padding: 5px 20px;
+            color: #9b9b9b;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .portfolio-filter-active {
+            background-color: #f0f0f0;
+            color: #272727 !important;
+        }
+
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .portfolio-box {
+            width: 224px;
+            padding: 15px;
+            border: 1px solid #eeeeee;
+            margin: 14px;
+
+        }
+
+        .portfolio-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        @media(max-width:740px) {
+            .portfolio-filter {
+                background-color: #f9f9f9;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .portfolio-filter-active {
+                background-color: #ffffff;
+                border: 1px solid rgb(219, 219, 219);
+            }
+
+            .portfolio-box {
+                width: 80%;
+            }
+        }
+
+        @media(max-width:550px) {
+
+            .project-heading h3 {
+                font-size: 1.8rem;
+            }
+        }
+
+        #react {
+            font-size: xx-large;
+            color: #00279a;
+        }
+
+        #name {
+            color: rgb(90, 156, 255);
+        }
+        .gray-bg {
+            background-color: rgb(1, 1, 42);
+        }
+        .section-title h2 {
+            font-weight: 700;
+            color: #20247b;
+            font-size: 45px;
+            margin: 0 0 15px;
+            border-left: 5px solid #fc5356;
+            padding-left: 15px;
+        }
+        .section-title {
+            padding-bottom: 45px;
+        }
+        .section-title p {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        /* Resume Box
+        ---------------------*/
+        .resume-box {
+          background: rgb(1, 1, 42);
+          box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.08);
+          border-radius: 10px;
+        }
+        .resume-box ul {
+          margin: 0;
+          padding: 30px 20px;
+          list-style: none;
+        }
+        .resume-box li {
+          position: relative;
+          padding: 0 20px 0 60px;
+          margin: 0 0 30px;
+        }
+        .resume-box li:last-child {
+          margin-bottom: 0;
+        }
+        .resume-box li:after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 20px;
+          border-left: 1px dashed #fc5356;
+          bottom: 0;
+        }
+        .resume-box .icon {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          color: #fc5356;
+          line-height: 40px;
+          background: #ffffff;
+          text-align: center;
+          z-index: 1;
+          border: 1px dashed;
+          border-radius: 50%;
+        }
+        .resume-box .time {
+          background: #fc5356;
+          color: #ffffff;
+          font-size: 10px;
+          padding: 2px 10px;
+          display: inline-block;
+          margin-bottom: 12px;
+          border-radius: 20px;
+          font-weight: 600;
+        }
+        .resume-box h5 {
+          font-weight: 700;
+          color: #01a18c;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        .resume-box p {
+          margin: 0;
+        }
+        
+        .resume-box li:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            border-left: 1px dashed #fc5356;
+            bottom: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+            
+        }
+        .section-title h2{
+            color: white;
+        }
+        #side-name{
+            color: red;
+            font-size: 2rem;
+        }
+        .left{
+            cursor: pointer;
+        }
+        .left:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                Abhi><span id="side-name">Portfolio</span>
+            </div>
+            <div class="right">
+                <ul>
+                    <li> <a href="/">Home</a></li>
+                    <li> <a href="contact.html">About </a></li>
+                    <li> <a href="#section">Experience</a></li>
+                    <li> <a href="https://github.com/AbhayGajjar?tab=repositories">Projects</a></li>
+                    <li> <a href="mailto:abhaymgajjar@gmail.com.com">Chat with me</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi,My name is <span id="name"></span>
+                <div>and i am a average</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="#" download="Abhay-CV.pdf"><button class="btn" onclick="audio.play();">Downalod CV</button></a>
+                    <button class="btn" onclick="location.href='https://github.com/AbhayGajjar'">GitHub</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <video src="video.mp4" loop autoplay muted></video>
+            </div>
+        </section>
+        <hr>
+        <section class="secoundsection">
+            <section id="project">
+                <!--heading--------------->
+                <div class="project-heading">
+                    <span>Let's See My Work</span>
+                    <span id="react"></span>
+                </div>
+                <div class="portfolio-container">
+                    <!--1------------>
+                    <a href="images/b-1.jpg" class="portfolio-box app" data-lightbox="work">
+                        <img src="project.png" alt="">
+                    </a>
+                    <!--2------------>
+                    <a href="images/b-2.jpg" class="portfolio-box app" data-lightbox="work">
+                        <img src="project.png" alt="">
+                    </a>
+                    <!--3------------>
+                    <a href="images/b-3.jpg" class="portfolio-box appdesign" data-lightbox="work">
+                        <img src="project.png" alt="">
+                    </a>
+                    <!--4------------>
+                    <a href="images/b-4.jpg" class="portfolio-box web" data-lightbox="work">
+                        <img src="project.png" alt="">
+                    </a>
+                    <!--5------------>
+                    <a href="images/b-5.jpg" class="portfolio-box web" data-lightbox="work">
+                        <img src="project.png" alt="">
+                    </a>
+                    <!--6------------>
+                    <a href="images/b-6.jpg" class="portfolio-box ai" data-lightbox="work">
+                        <img src="project.png" alt="">
+                    </a>
+                </div>
+            </section>
+            </div>
+            <section class="section gray-bg" id="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="section-title">
+                                <h2>Experience</h2>
+                                <p>I design and develop services for customers of all sizes, specializing in creating
+                                    stylish, modern websites</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 m-15px-tb">
+                            <div class="resume-box">
+                                <ul>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <span class="time">2019 - Present</span>
+                                        <h5>Art Director - Facebook Inc</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <span class="time">2019 - Present</span>
+                                        <h5>Art Director - Facebook Inc</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <span class="time">2019 - Present</span>
+                                        <h5>Art Director - Facebook Inc</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-15px-tb">
+                            <div class="resume-box">
+                                <ul>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <span class="time">2019 - Present</span>
+                                        <h5>Art Director - Facebook Inc</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <span class="time">2019 - Present</span>
+                                        <h5>Art Director - Facebook Inc</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <span class="time">2019 - Present</span>
+                                        <h5>Art Director - Facebook Inc</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Designer', 'Gamer', 'Web Devloper', 'Researcher'],
+            typeSpeed: 60,
+        });
+    </script>
+    <script>
+        var typed = new Typed('#react', {
+            strings: ['React js', 'Tailwind Css', 'Node js',],
+            typeSpeed: 60,
+        });
+    </script>
+    <script>
+        var typed = new Typed('#name', {
+            strings: ['Abhi', 'Abhay',],
+            typeSpeed: 47,
+        });
+    </script>
+    <script src="js/JQuery.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+        /*blog-filter-menu----------------------------*/
+        $(document).on('click', '.portfolio-filter li', function () {
+            $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
+        });
+
+        /*portfolio-filter---------------------------------*/
+        $(document).ready(function () {
+            $('.list').click(function () {
+                const value = $(this).attr('data-filter');
+                if (value == 'all') {
+                    $('.portfolio-box').show('1000');
+                }
+                else {
+                    $('.portfolio-box').not('.' + value).hide('1000');
+                    $('.portfolio-box').filter('.' + value).show('1000');
+                }
+            });
+        });
+    </script>
+    <script>
+        const audio =  new Audio();
+        audio.src="./click.wav";
+ 
+     </script>
+
+</body>
+
+</html>
